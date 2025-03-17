@@ -1,0 +1,66 @@
+.navbar-vertical {
+    position: fixed;
+    width: 60px; /* Initially small */
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.navbar-vertical:hover {
+    width: 250px; /* Expand on hover */
+}
+
+.navbar-vertical .nav-link {
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.navbar-vertical .icon {
+    width: 24px;  /* Fixed icon size */
+    height: 24px;
+    fill: white;
+    margin-right: 10px;
+}
+
+.navbar-vertical .nav-text {
+    opacity: 0; /* Hide text initially */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navbar-vertical:hover .nav-text {
+    opacity: 1; /* Show text when hovered */
+}
+
+.content {
+    margin-left: 70px; /* Adjust for collapsed navbar */
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.navbar-vertical:hover + .content {
+    margin-left: 270px; /* Adjust content position when navbar expands */
+}
+.feature-box {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease-in-out;
+}
+.feature-box:hover {
+    transform: scale(1.05);
+}
+.feature-icon {
+    width: 80px;
+    height: 80px;
+}
