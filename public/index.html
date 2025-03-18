@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-  <nav class="navbar-vertical d-flex flex-column align-items-start p-3">
+  <nav class="navbar-vertical d-flex flex-column align-items-start p-3" id="left-nav">
     <a href="#" class="nav-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-soil-test" viewBox="0 0 16 16">
         <!-- Circle Background -->
@@ -70,17 +70,18 @@
       
         <span class="nav-text">Irrigation</span>
     </a>
-    <a href="#" class="nav-link">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-sickle" viewBox="0 0 16 16">
-        <!-- Sickle Blade -->
-        <path d="M10 2 C6 2, 3 6, 6 9 C9 12, 12 9, 11 7 C10 8, 9 8, 8 7 C6 5, 8 3, 10 4 Z" fill="currentColor"/>
-        
-        <!-- Handle -->
-        <rect x="9.5" y="8.5" width="2" height="5" rx="0.5" fill="currentColor"/>
-      </svg>
-      
-        <span class="nav-text">Harvesting</span>
-    </a>
+    <form action="/harvest" method="POST" style="display: inline;">
+      <button type="submit" class="nav-link" style="background: none; border: none; cursor: pointer;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-sickle" viewBox="0 0 16 16">
+              <!-- Sickle Blade -->
+              <path d="M10 2 C6 2, 3 6, 6 9 C9 12, 12 9, 11 7 C10 8, 9 8, 8 7 C6 5, 8 3, 10 4 Z" fill="currentColor"/>
+              <!-- Handle -->
+              <rect x="9.5" y="8.5" width="2" height="5" rx="0.5" fill="currentColor"/>
+          </svg>
+          <span class="nav-text">Harvesting</span>
+      </button>
+  </form>
+  
     <a href="#" class="nav-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/>
@@ -132,7 +133,7 @@
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
             <li><a href="#" class="nav-link px-2">Features</a></li>
-            <li><a href="#" class="nav-link px-2">Pricing</a></li>
+            <li><a href="#" class="nav-link px-2">Chatbot</a></li>
             <li><a href="#" class="nav-link px-2">FAQs</a></li>
             <li><a href="#" class="nav-link px-2">About</a></li>
           </ul>
@@ -143,7 +144,7 @@
           </div>
         </header>
       </div>
-      <div class="container col-xxl-10 px-4 py-5">
+      <div class="container col-xxl-10 px-4 py-5" id="top1">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
             <img src="./farm.jpg" class="d-block mx-lg-auto img-fluid " id="main_1" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
@@ -154,55 +155,109 @@
           </div>
         </div>
       </div>
+      <hr/>
 
       <div class="container py-5">
         <h2 class="text-center mb-4">Key Features</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="feature-box text-center p-4">
-                    <img src="soil-test.png" alt="Soil Testing" class="feature-icon">
+                    <img src="./soiltest.jpeg" alt="Soil Testing" class="feature-icon">
                     <h5 class="mt-3">Soil Testing</h5>
                     <p>Analyze soil quality and get recommendations for better farming.</p>
                 </div>
             </div>
             <div class="col">
                 <div class="feature-box text-center p-4">
-                    <img src="pest-detect.png" alt="Pest Detection" class="feature-icon">
+                    <img src="./pest.jpeg" alt="Pest Detection" class="feature-icon">
                     <h5 class="mt-3">Pest Detection</h5>
                     <p>Identify and control harmful pests using AI-based monitoring.</p>
                 </div>
             </div>
             <div class="col">
                 <div class="feature-box text-center p-4">
-                    <img src="crop-manage.png" alt="Crop Management" class="feature-icon">
+                    <img src="./cropmanage.jpeg" alt="Crop Management" class="feature-icon">
                     <h5 class="mt-3">Crop Management</h5>
                     <p>Plan and optimize crop growth with data-driven insights.</p>
                 </div>
             </div>
             <div class="col">
                 <div class="feature-box text-center p-4">
-                    <img src="irrigation.png" alt="Irrigation" class="feature-icon">
+                    <img src="./irrigation.jpg" alt="Irrigation" class="feature-icon">
                     <h5 class="mt-3">Irrigation Advisory</h5>
                     <p>Smart irrigation recommendations based on weather and soil data.</p>
                 </div>
             </div>
             <div class="col">
                 <div class="feature-box text-center p-4">
-                    <img src="govt-aid.png" alt="Govt Financial Aids" class="feature-icon">
+                    <img src="./finance.jpeg" alt="Govt Financial Aids" class="feature-icon">
                     <h5 class="mt-3">Govt Financial Aids</h5>
                     <p>Stay updated with available financial support for farmers.</p>
                 </div>
             </div>
             <div class="col">
                 <div class="feature-box text-center p-4">
-                    <img src="subsidies.png" alt="Subsidies" class="feature-icon">
+                    <img src="./sub.jpeg" alt="Subsidies" class="feature-icon">
                     <h5 class="mt-3">Subsidies</h5>
                     <p>Get access to farming subsidies and government schemes.</p>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <section class="chatbot-section">
+      <div class="content">
+          <h1>Smart Agricultural Chatbot</h1>
+          <p>
+              Our AI-powered chatbot helps farmers with soil testing, pest detection, crop management, 
+              irrigation, and government financial aid. It provides real-time assistance and expert 
+              recommendations to improve productivity and income.
+          </p>
+          <img src="./chatbot.jpeg" alt="Agricultural Chatbot" class="chatbot-image">
+          <h2>Multilingual Support</h2>
+          <p>
+              The chatbot supports multiple languages, enabling farmers to interact in their 
+              **native language** for better understanding. It offers voice and text-based responses 
+              in local dialects, making smart farming accessible to everyone.
+          </p>cd page
+      </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+        <div class="faq-item">
+            <button class="faq-question">What is this website about? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">This website provides insights and tools to help users make informed decisions based on AI-driven recommendations.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How does the chatbot work? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">The chatbot uses natural language processing (NLP) to understand queries and provide relevant responses.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Can I access this on mobile? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Yes, the website is fully responsive and works seamlessly on all devices.</div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+  </footer>
+</div>
+
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 </html>
