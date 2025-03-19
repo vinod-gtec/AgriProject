@@ -25,6 +25,9 @@ app.get('/harvest', (req, res) => {
 app.post('/harvest', (req, res) => {
     res.redirect('/harvest');
 });
+app.get('/soiltesting', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'soiltesting.html'));
+});
 
 // Start the server
 app.listen(PORT, () => {

@@ -1,13 +1,41 @@
-.harvest-top{
-    background-image: url('./harvest2.webp');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+.images-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px #000000;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+.images-container img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+.harvesting-methods {
+    width: 80%;
+    margin: 30px auto;
+    text-align: left;
+}
+.method {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+}
+.method h3 {
+    margin: 0;
+    color: #4CAF50;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
 }
