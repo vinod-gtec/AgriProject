@@ -1,0 +1,11 @@
+.container{
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.glass-effect {
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blurred glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
