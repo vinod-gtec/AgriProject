@@ -28,7 +28,8 @@
 
 #top1{
     background-image: url('/static/backgggg.gif');
-    background-size: cover;
+    background-size: 100%;
+    
    
     
     background-repeat: no-repeat;
