@@ -32,6 +32,28 @@
         <button class="btn btn-light btn-lg mt-3">Get Started</button>
     </header>
 
+    <div class="container mt-5 shadow-lg p-5 bg-white rounded animate__animated animate__fadeIn">
+        <h2 class="text-center text-success mb-4">🌾 Smart Crop Recommendation System</h2>
+        <form method="POST" action="/predict_crop">
+
+            <div class="row g-3">
+                {% for field in ['N', 'P', 'K', 'T', 'H', 'PH', 'R'] %}
+                <div class="col-md-4">
+                    <label class="form-label">{{ field }}</label>
+                    <input type="number" class="form-control" name="{{ field }}" step="0.1" required>
+                </div>
+                {% endfor %}
+            </div>
+            <button type="submit" class="btn btn-success mt-4 w-100">Get Crop Recommendation</button>
+        </form>
+
+        {% if result %}
+        <div class="alert alert-success mt-4 text-center animate__animated animate__zoomIn">
+            <h4>🌱 Recommended Crop:</h4>
+            <h2 class="text-primary">{{ result|capitalize }}</h2>
+        </div>
+        {% endif %}
+
     <!-- Crop Monitoring Dashboard -->
     <section class="container my-5">
         <div class="row text-center">

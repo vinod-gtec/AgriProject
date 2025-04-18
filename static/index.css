@@ -27,16 +27,14 @@
 }
 
 #top1{
-    background-image: url('/static/backgggg.gif');
+    background-image: url("Exclusive\ Sunrise\ _Sunset\ Animated\ Gif.gif");
     background-size: 100%;
-    
-   
-    
     background-repeat: no-repeat;
-    width: 100%;
+    width: fit-content;
     height: 70vh;
-    background-position: center;
     margin-left: 4%;
+    background-size: cover;
+
 }
 #uptext{
     color: white;
@@ -206,11 +204,7 @@ h1, h2, p {
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
 }
-.lead{
-    color: #000000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 70px;
-}
+
 
 .logo{
     position: relative;
@@ -219,6 +213,14 @@ h1, h2, p {
     margin-left: 10%;
     z-index: -5;
 }
+
+#lead{
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
 
 
 
